@@ -2,9 +2,7 @@ import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-export const dark = "#0f1624";
-export const darkSecond = "#1a202c";
-export const orange = "#ff7b00";
+
 
 const Navbar = () => {
   const [page, setPage] = useState(1);
