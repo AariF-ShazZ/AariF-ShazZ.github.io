@@ -15,8 +15,8 @@ import './responsive.css';
 const Skills = () => {
   return (
     <Box m="auto" bg={"#f1f1f1"} h="auto">
-      <Flex pt="40px"  justifyContent="center">
-        <Heading fontSize="30px" color={"#d11243"}>
+      <Flex py="40px"  justifyContent="center">
+        <Heading fontSize={["20px","30px","30px"]} color={"#d11243"}>
           My Technical Skills
   
         </Heading>

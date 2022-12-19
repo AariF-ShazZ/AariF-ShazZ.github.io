@@ -8,9 +8,9 @@ import './responsive.css';
 const Work = () => {
   const arr = new Array(10).fill(0)
   return (
-    <Box  pt="100px" mt="-20px" h="auto" bg={"#ecf0f3"} pb="40px">
-      <Box textAlign="center">
-          <Heading color={"#d11243"} as="span">
+    <Box    h="auto" bg={"#ecf0f3"} pb="40px">
+      <Box py="40px" textAlign="center">
+          <Heading color={"#d11243"} fontSize={["20px","30px","30px"]}  as="span">
           My Projects
 
         </Heading>

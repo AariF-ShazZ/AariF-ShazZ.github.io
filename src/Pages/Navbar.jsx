@@ -2,11 +2,13 @@ import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-
+import PDF from "../Components/Image/Aarif_Khan_Resume.pdf"
 
 const Navbar = () => {
   const [page, setPage] = useState(1);
-
+  const handleResumeDownload = () => {
+    window.open("https://drive.google.com/file/d/10PDugc1xpqz3DhD8TTIGBWi19StgFI96/view","_blank","noopener","noreferrer")
+  }
   const handlePage = (id) => {
     if (id === 1) {
       setPage(id);
@@ -31,6 +33,7 @@ const Navbar = () => {
       fontWeight="bold"
       fontFamily="sans-serif"
       boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
+      zIndex={1000}
     >
       <Flex
         ml="10px"
@@ -170,7 +173,7 @@ const Navbar = () => {
           }}
           fontSize="20px"
         >
-           <a style={{textDecoration:"none"}} target="#" href="https://drive.google.com/file/d/10PDugc1xpqz3DhD8TTIGBWi19StgFI96/view">
+           <a style={{textDecoration:"none"}} href={PDF} onClick={handleResumeDownload} download>
           <Button
             _hover={{ colorScheme: "#d11243" , variant: "outline" }}
             h="35px"

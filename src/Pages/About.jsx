@@ -13,15 +13,15 @@ import './responsive.css';
 
 const About = () => {
   return (
-    <Box mt="-25px" bg={"#ecf0f3"}>
-      <Flex p="50px 0" bg={"#ecf0f3"} justifyContent="center">
+    <Box bg={"#ecf0f3"} >
+      <Flex pb="40px"  bg={"#ecf0f3"} justifyContent="center">
 
           
-          <Heading fontSize="30px" color={"#d11243"} as="span">
+          <Heading py="40px" fontSize={["20px","30px","30px"]} color={"#d11243"} as="span">
           All About me
         </Heading>
       </Flex>
-      <Flex h="700px" justifyContent="space-around" bg={"#ecf0f3"}>
+      <Flex h="500px" justifyContent="space-around" bg={"#ecf0f3"}>
         <Flex  display={["none" , "none" , "none" ,"flex" ,"flex"]} w="50%" justifyContent="center">
           <Box w="100%" h="400px">
             <Image  w="650px" h="400px" ml="5%" src="https://wallpaperaccess.com/full/2945080.jpg" />
@@ -49,7 +49,7 @@ const About = () => {
             </UnorderedList>
           </Stack>
         </Flex>
-      </Flex>
+      </Flex >
     </Box>
   );
 };

@@ -68,8 +68,8 @@ const Contact = () => {
 
   return (
     <Box>
-      <Flex pt="40px" bg={"#f1f1f1"} justifyContent="center">   
-          <Heading fontSize="30px" color={"#d11243"} as="span">
+      <Flex py="40px" bg={"#f1f1f1"} justifyContent="center">   
+          <Heading fontSize={["20px","30px","30px"]} color={"#d11243"} as="span">
           Chat And Connect With Me
   
         </Heading>
@@ -88,15 +88,12 @@ const Contact = () => {
               target="#"
               href="https://github.com/AariF-ShazZ"
             >
-              <Button
-                _hover={{ cursor: "pointer" }}
-                color="black"
-                fontSize="17px"
+              <Button     
                 rounded={5}
-                border="none"
                 leftIcon={<BsGithub />}
-                bg="#feb2b2"
-                variant="solid"
+                fontSize="19px"
+                colorScheme='blackAlpha' 
+                variant='outline'
               >
                 Github
               </Button>
@@ -107,27 +104,23 @@ const Contact = () => {
               href="https://www.linkedin.com/in/aarif-shazz-638647208/"
             >
               <Button
-                _hover={{ cursor: "pointer" }}
-                color="black"
-                fontSize="17px"
                 rounded={5}
-                border="none"
                 leftIcon={<BsLinkedin />}
-                bg="#9bdaf3"
-                variant="solid"
+                fontSize="19px"
+                colorScheme='linkedin' 
+                variant='outline'
               >
                 Linkedin
               </Button>
             </a>
             <Button
-              _hover={{ cursor: "pointer" }}
+           
               onClick={() => alert("aarif568khan@gmail.com")}
               rounded={5}
-              border="none"
               rightIcon={<AiOutlineMail />}
-              bg={"#f1f1f1"}
-              color="white"
-              fontSize="17px"
+              fontSize="19px"
+              colorScheme='red' 
+              variant='outline'
             >
               Call us
             </Button>

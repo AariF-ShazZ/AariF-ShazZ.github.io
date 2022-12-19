@@ -1,7 +1,8 @@
+
 export const project = [
     {
         id:0,
-        img:"https://aarif-shazz.github.io/static/media/shine.3143b3e9.png",
+        img:"https://static1.shine.com/c/s1/images/candidate/logomap_new.gif",
         title:"Shine",
         description:"Shine.com connects jobseekers and recruiters by accurately matching candidate profiles to the relevant job openings through an advanced 2-way matching technology.",
         tech:["HTML" , "CSS" ,"REACT" ,"REDUX","Chakra UI", "REST-API" , "GIT"],
@@ -11,7 +12,7 @@ export const project = [
     },
     {
         id:1,
-        img:"https://aarif-shazz.github.io/static/media/BeautyBebo.f50e1fbb.png",
+        img:"https://reactjsexample.com/content/images/2022/07/Code-2022-26-40-14.jpg",
         title:"BeautyBebo",
         description:"Beauty Bebo products do not transform your face and body. Rather, they bring out the beautiful skin that you already have. Our main goal is to bring out the best you possible. You will always find our beauty products online, so you don't necessarily have to worry about our stores.",
         tech:["HTML" , "CSS" ,"JS"],
