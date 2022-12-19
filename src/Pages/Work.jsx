@@ -8,13 +8,11 @@ import './responsive.css';
 const Work = () => {
   const arr = new Array(10).fill(0)
   return (
-    <Box  pt="100px" mt="-20px" h="auto" bg={dark} pb="40px">
+    <Box  pt="100px" mt="-20px" h="auto" bg={"#ecf0f3"} pb="40px">
       <Box textAlign="center">
-        <Heading fontSize="35px">
-          My{" "}
-          <Heading color={orange} as="span">
-            Projects
-          </Heading>
+          <Heading color={"#d11243"} as="span">
+          My Projects
+
         </Heading>
       </Box>
       <Grid w="auto" p="10px" templateColumns={["repeat(1, 1fr)","repeat(1, 1fr)","repeat(2, 1fr)","repeat(2, 1fr)","repeat(3, 1fr)"]} gap={10}>

@@ -12,7 +12,6 @@ import {
   Toast,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { dark, orange, darkSecond } from "./Navbar";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import "./responsive.css";
@@ -69,19 +68,17 @@ const Contact = () => {
 
   return (
     <Box>
-      <Flex pt="40px" bg={darkSecond} justifyContent="center">
-        <Heading fontSize="30px">
-          Chat And{" "}
-          <Heading fontSize="30px" color={orange} as="span">
-            Connect With Me
-          </Heading>
+      <Flex pt="40px" bg={"#f1f1f1"} justifyContent="center">   
+          <Heading fontSize="30px" color={"#d11243"} as="span">
+          Chat And Connect With Me
+  
         </Heading>
       </Flex>
-      <Flex h="600px" bg={darkSecond} justifyContent="space-around">
+      <Flex h="600px" bg={"#f1f1f1"} justifyContent="space-around">
         <Flex display={["none" , "none" , "none" ,"flex" ,"flex"]} w="40%" justifyContent="center" alignItems="center">
           <Image
             w="600px"
-            src="https://portfolio-m-sehrawat.vercel.app/developerActivity.svg"
+            src="https://wallpaperaccess.com/full/2945080.jpg"
           />
         </Flex>
         <VStack w={["100%" , "100%" , "100%", "30%","30%"]} pt="150px" overflow="hidden">
@@ -89,7 +86,7 @@ const Contact = () => {
             <a
               style={{ textDecoration: "none" }}
               target="#"
-              href="https://github.com/Akhil2014"
+              href="https://github.com/AariF-ShazZ"
             >
               <Button
                 _hover={{ cursor: "pointer" }}
@@ -107,7 +104,7 @@ const Contact = () => {
             <a
               style={{ textDecoration: "none" }}
               target="#"
-              href="https://www.linkedin.com/in/akhil-khan-709122207/"
+              href="https://www.linkedin.com/in/aarif-shazz-638647208/"
             >
               <Button
                 _hover={{ cursor: "pointer" }}
@@ -124,11 +121,11 @@ const Contact = () => {
             </a>
             <Button
               _hover={{ cursor: "pointer" }}
-              onClick={() => alert("mdakhilkhan2014@gmail.com")}
+              onClick={() => alert("aarif568khan@gmail.com")}
               rounded={5}
               border="none"
               rightIcon={<AiOutlineMail />}
-              bg={darkSecond}
+              bg={"#f1f1f1"}
               color="white"
               fontSize="17px"
             >
@@ -199,7 +196,7 @@ const Contact = () => {
             border="none"
             rounded={10}
             color="white"
-            bg={orange}
+            bg={"#d11243"}
             h="45px"
           >
             Send Message

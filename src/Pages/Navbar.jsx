@@ -1,4 +1,4 @@
-import { Box, Flex, textDecoration } from "@chakra-ui/react";
+import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
@@ -9,7 +9,6 @@ export const orange = "#ff7b00";
 const Navbar = () => {
   const [page, setPage] = useState(1);
 
-  const white = "white";
   const handlePage = (id) => {
     if (id === 1) {
       setPage(id);
@@ -27,12 +26,13 @@ const Navbar = () => {
     <Flex
       position="fixed"
       h="62px"
-      bg={dark}
+      bg={"#ecf0f3"}
       justifyContent="space-between"
       w="100%"
-      color="white"
+      color=""
       fontWeight="bold"
       fontFamily="sans-serif"
+      boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
     >
       <Flex
         ml="10px"
@@ -42,9 +42,9 @@ const Navbar = () => {
         alignItems="center"
       >
         <Text id="icon" fontSize="40px">
-          AK
-          <Text color={orange} as="span">
-            HIL
+          Portfo
+          <Text color={"#d11243"} as="span">
+            lio
           </Text>
         </Text>
       </Flex>
@@ -58,12 +58,12 @@ const Navbar = () => {
         fontFamily="serif"
       >
         <Text
-          color={page === 1 ? orange : ""}
+          color={page === 1 ? "#d11243" : ""}
           textDecoration={page === 1 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -75,12 +75,12 @@ const Navbar = () => {
           </Link>
         </Text>
         <Text
-          color={page === 2 ? orange : ""}
+          color={page === 2 ? "#d11243" : ""}
           textDecoration={page === 2 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -92,12 +92,12 @@ const Navbar = () => {
           </Link>
         </Text>
         <Text
-          color={page === 3 ? orange : ""}
+          color={page === 3 ? "#d11243" : ""}
           textDecoration={page === 3 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -109,12 +109,12 @@ const Navbar = () => {
           </Link>
         </Text>
         <Text
-          color={page === 4 ? orange : ""}
+          color={page === 4 ? "#d11243" : ""}
           textDecoration={page === 4 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -126,12 +126,12 @@ const Navbar = () => {
           </Link>
         </Text>
         <Text
-          color={page === 5 ? orange : ""}
+          color={page === 5 ? "#d11243" : ""}
           textDecoration={page === 5 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -143,12 +143,12 @@ const Navbar = () => {
           </Link>
         </Text>
         <Text
-          color={page === 6 ? orange : ""}
+          color={page === 6 ? "#d11243" : ""}
           textDecoration={page === 6 ? "underline" : ""}
           _hover={{
-            bg: orange,
+            bg: "#d11243",
             p: "10px",
-            color: "white",
+            color: "#919497",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -158,6 +158,36 @@ const Navbar = () => {
           <Link onClick={() => handlePage(6)} to="contact" smooth={true}>
             Contact
           </Link>
+        </Text>
+        <Text
+          color={page === 6 ? "#d11243" : ""}
+          textDecoration={page === 6 ? "underline" : ""}
+          _hover={{
+            bg: "#d11243",
+            p: "10px",
+            color: "#919497",
+            rounded: "10px",
+            transition: "all 0.2s",
+            cursor: "pointer",
+          }}
+          fontSize="20px"
+        >
+           <a style={{textDecoration:"none"}} target="#" href="https://drive.google.com/file/d/10PDugc1xpqz3DhD8TTIGBWi19StgFI96/view">
+          <Button
+            _hover={{ colorScheme: "#d11243" , variant: "outline" }}
+            h="35px"
+            w="140px"
+            fontSize="20px"
+            bg={"#d11243"}
+            rounded={5}
+            fontWeight="bold"
+            border="none"
+            color="#f1f1f1"
+            variant="solid"
+          >
+            Resume
+          </Button>
+          </a>
         </Text>
       </Flex>
     </Flex>

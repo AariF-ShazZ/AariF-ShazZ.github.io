@@ -8,19 +8,17 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React from "react";
-import { dark, darkSecond, orange } from "./Navbar";
+// import { dark, darkSecond, orange } from "./Navbar";
 import skills from "../Components/Data/Skills";
 import './responsive.css';
 
 const Skills = () => {
   return (
-    <Box m="auto" bg={darkSecond} h="auto">
-      <Flex pt="40px" bg={darkSecond} justifyContent="center">
-        <Heading fontSize="30px">
-          My{" "}
-          <Heading fontSize="30px" color={orange} as="span">
-            Technical Skills
-          </Heading>
+    <Box m="auto" bg={"#f1f1f1"} h="auto">
+      <Flex pt="40px"  justifyContent="center">
+        <Heading fontSize="30px" color={"#d11243"}>
+          My Technical Skills
+  
         </Heading>
       </Flex>
       <Grid
@@ -30,15 +28,15 @@ const Skills = () => {
         margin="auto"
         gap={6}
         h="auto"
-        bg={darkSecond}
+        bg={"#f1f1f1"}
       >
         {skills.map(({icon,text}) => {
           return (
             <>
               <Flex key={text}
-                _hover={{ bg: "black", transition: "all 0.9s" }}
+                _hover={{ boxShadow:"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;", transition: "all 0.9s" }}
                 alignItems="center"
-                bg={dark}
+                bg={"#f1f1f1"}
                 justifyContent="center"
                 w="140px"
                 rounded={7}
@@ -46,7 +44,7 @@ const Skills = () => {
               >
                 <VStack>
                   <Image src={icon} w="100px" h="100px" />
-                  <Text color="white">{text}</Text>
+                  <Text color="BLACK">{text}</Text>
                 </VStack>
               </Flex>
             </>
