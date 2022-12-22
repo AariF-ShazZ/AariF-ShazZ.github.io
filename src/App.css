@@ -1,0 +1,15 @@
+body::-webkit-scrollbar {
+  width: 0.3em;
+  height: 50px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color:#f1f1f1;
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #d11243;
+  outline: 1px solid slategrey;
+}
+
