@@ -25,11 +25,11 @@ const Navbar = () => {
   return (
     <Flex
       position="fixed"
-      h="62px"
+      h="75px"
       bg={"#ecf0f3"}
       justifyContent="space-between"
       w="100%"
-      color=""
+      color="gray.500"
       fontWeight="bold"
       fontFamily="sans-serif"
       boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px"}
@@ -64,7 +64,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -81,7 +81,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -98,7 +98,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -115,7 +115,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -132,7 +132,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -149,7 +149,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",
@@ -166,7 +166,7 @@ const Navbar = () => {
           _hover={{
             bg: "#d11243",
             p: "10px",
-            color: "#919497",
+            color: "#ecf0f3",
             rounded: "10px",
             transition: "all 0.2s",
             cursor: "pointer",

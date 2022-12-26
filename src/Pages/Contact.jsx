@@ -132,12 +132,13 @@ const Contact = () => {
             value={user.name}
             onChange={getUserdata}
             pl="10px"
+            m={"2% 0"}
             w="88%"
             h="42px"
             fontSize="15px"
             rounded={10}
-            _active={{ border: "1px solid lightblue" }}
-            placeholder="Enter your full name"
+            _active={{ border: "1px solid #d11243" }}
+            placeholder="Enter Full Name"
           />
           <Input
             id="email"
@@ -151,8 +152,8 @@ const Contact = () => {
             type="email"
             fontSize="15px"
             rounded={10}
-            _active={{ border: "1px solid lightblue" }}
-            placeholder="Enter your email"
+            _active={{ border: "1px solid #d11243" }}
+            placeholder="Enter Email"
           />
           <Input
            type="number"
@@ -165,22 +166,23 @@ const Contact = () => {
             onChange={getUserdata}
             fontSize="15px"
             rounded={10}
-            _active={{ border: "1px solid lightblue" }}
-            placeholder="Enter your number"
+            _active={{ border: "1px solid #d11243" }}
+            placeholder="Enter Mobile Number"
           />
           <Textarea
             pl="10px"
             w="88%"
             h="100px"
             id="subject"
+            gap="2%"
             required
             name="message"
             value={user.message}
             onChange={getUserdata}
             fontSize="13px"
             rounded={10}
-            _active={{ border: "1px solid lightblue" }}
-            placeholder="Message"
+            _active={{ border: "1px solid #d11243" }}
+            placeholder="Enter Massage"
           />
           <Button
             onClick={sendData}
@@ -192,7 +194,7 @@ const Contact = () => {
             bg={"#d11243"}
             h="45px"
           >
-            Send Message
+           Contact Me
           </Button>
         </VStack>
       </Flex>
