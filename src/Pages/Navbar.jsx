@@ -186,7 +186,7 @@ const Navbar = () => {
             color="#f1f1f1"
             variant="solid"
           >
-            Download
+            Resume
           </Button>
           </a>
         </Text>
