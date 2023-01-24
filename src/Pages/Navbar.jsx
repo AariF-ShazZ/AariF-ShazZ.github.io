@@ -2,12 +2,12 @@ import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-import PDF from "../Components/Image/Aarif-Khan-Resume.pdf"
+// import PDF from "https://drive.google.com/uc?export=download&id=10PDugc1xpqz3DhD8TTIGBWi19StgFI96"
 
 const Navbar = () => {
   const [page, setPage] = useState(1);
   const handleResumeDownload = () => {
-    window.open("https://drive.google.com/file/d/10PDugc1xpqz3DhD8TTIGBWi19StgFI96/view","_blank","noopener","noreferrer")
+    window.open("","_blank","noopener","noreferrer")
   }
   const handlePage = (id) => {
     if (id === 1) {
@@ -173,7 +173,7 @@ const Navbar = () => {
           }}
           fontSize="20px"
         >
-           <a style={{textDecoration:"none"}} href={PDF} onClick={handleResumeDownload} download>
+           <a style={{textDecoration:"none"}} href={"https://drive.google.com/uc?export=download&id=10PDugc1xpqz3DhD8TTIGBWi19StgFI96"} onClick={handleResumeDownload} download>
           <Button
             _hover={{ colorScheme: "#d11243" , variant: "outline" }}
             h="35px"
