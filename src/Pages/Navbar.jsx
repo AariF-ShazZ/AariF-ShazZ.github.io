@@ -2,7 +2,7 @@ import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-import PDF from "../Components/Image/Aarif_Khan_Resume.pdf"
+import PDF from "../Components/Image/Aarif-Khan-Resume.pdf"
 
 const Navbar = () => {
   const [page, setPage] = useState(1);
