@@ -2,12 +2,12 @@ import { Box, Button, Flex, textDecoration } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-// import PDF from "https://drive.google.com/uc?export=download&id=10PDugc1xpqz3DhD8TTIGBWi19StgFI96"
+import PDF from "../Components/Image/Aarif-Khan-Resume.pdf"
 
 const Navbar = () => {
   const [page, setPage] = useState(1);
   const handleResumeDownload = () => {
-    window.open("","_blank","noopener","noreferrer")
+    window.open(PDF,"_blank","noopener","noreferrer")
   }
   const handlePage = (id) => {
     if (id === 1) {
@@ -26,6 +26,7 @@ const Navbar = () => {
     <Flex
       position="fixed"
       h="75px"
+      px={"2%"}
       bg={"#ecf0f3"}
       justifyContent="space-between"
       w="100%"
@@ -51,8 +52,8 @@ const Navbar = () => {
       </Flex>
       <Flex
         display={["none" , "none" , "none", "flex " , "flex"]}
-        width="50%"
-        justifyContent="space-around"
+        width="60%"
+        justifyContent="space-between"
         alignItems="center"
         textTransform="uppercase"
         fontWeight="bold"
@@ -173,11 +174,11 @@ const Navbar = () => {
           }}
           fontSize="20px"
         >
-           <a style={{textDecoration:"none"}} href={"https://drive.google.com/uc?export=download&id=10PDugc1xpqz3DhD8TTIGBWi19StgFI96"} onClick={handleResumeDownload} download>
+           <a style={{textDecoration:"none"}}  onClick={handleResumeDownload} download>
           <Button
             _hover={{ colorScheme: "#d11243" , variant: "outline" }}
             h="35px"
-            w="140px"
+            w="170px"
             fontSize="20px"
             bg={"#d11243"}
             rounded={5}
@@ -186,7 +187,7 @@ const Navbar = () => {
             color="#f1f1f1"
             variant="solid"
           >
-            Resume
+           Download Resume
           </Button>
           </a>
         </Text>

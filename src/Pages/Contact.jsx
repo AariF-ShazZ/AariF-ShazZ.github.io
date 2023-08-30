@@ -61,13 +61,8 @@ const Contact = () => {
     
   }
 
-  
-
-  
-
-
   return (
-    <Box>
+    <Box backgroundColor={"red"}>
       <Flex py="40px" bg={"#f1f1f1"} justifyContent="center">   
           <Heading fontSize={["20px","30px","30px"]} color={"#d11243"} as="span">
           Chat And Connect With Me
@@ -160,6 +155,7 @@ const Contact = () => {
             required
             value={user.email}
             onChange={getUserdata}
+            border={"2px solid blue"}
             pl="10px"
             w="88%"
             h="42px"
@@ -175,6 +171,7 @@ const Contact = () => {
             w="88%"
             required
             h="42px"
+            border={"2px solid blue"}
             name="number"
             value={user.number}
             onChange={getUserdata}
@@ -187,6 +184,7 @@ const Contact = () => {
             pl="10px"
             w="88%"
             h="100px"
+            color={"black"}
             id="subject"
             gap="2%"
             required
@@ -194,6 +192,7 @@ const Contact = () => {
             value={user.message}
             onChange={getUserdata}
             fontSize="13px"
+            border={"2px solid blue"}
             rounded={10}
             _active={{ border: "1px solid #d11243" }}
             placeholder="Enter Massage"

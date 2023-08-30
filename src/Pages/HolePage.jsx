@@ -5,6 +5,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Work from "./Work";
 import Contact from "./Contact";
+import Footer from "./Connect";
 import Graph from "./Graph";
 
 const HolePage = () => {
@@ -26,7 +27,8 @@ const HolePage = () => {
         <Graph />
       </Box>
       <Box id="contact">
-        <Contact />
+        {/* <Contact /> */}
+        <Footer/>
       </Box>
     </Box>
   );

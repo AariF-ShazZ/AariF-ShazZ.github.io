@@ -38,7 +38,7 @@ const Home = () => {
               />
             </Text>
           </Box>
-        <a style={{textDecoration:"none"}} target="#" href="https://drive.google.com/file/d/10PDugc1xpqz3DhD8TTIGBWi19StgFI96/view">
+        <a style={{textDecoration:"none"}} target="#" href="https://drive.google.com/drive/folders/1v6AhXkjMW6E_Ac2_VaSbRMYl0ThJemch?usp=sharing">
           <Button
             _hover={{ colorScheme: "#d11243" , variant: "outline" }}
             h="45px"
