@@ -8,8 +8,7 @@ export const project = [
         title:"shoesHub",
         description:"This is a e-commerce website. Here you can buy awesome shoes. I have created this using MERN Stack",
         tech:["HTML","CSS","JS","REACT","Chakra UI","GIT","JSON SERVER","Node.js","Express.js","mongoDB","Mongoose"],
-        links:["https://github.com/AariF-ShazZ/autoMobile" , "https://64faba7c1bafc9379335820a--genuine-youtiao-be887b.netlify.app/"]
-
+        links:["https://github.com/AariF-ShazZ/autoMobile" , "https://auto-mobile.vercel.app/"]
 
     },
     {
