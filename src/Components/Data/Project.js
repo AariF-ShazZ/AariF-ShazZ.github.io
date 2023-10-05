@@ -8,7 +8,7 @@ export const project = [
         title:"shoesHub",
         description:"This is a e-commerce website. Here you can buy awesome shoes. I have created this using MERN Stack",
         tech:["HTML","CSS","JS","REACT","Chakra UI","GIT","JSON SERVER","Node.js","Express.js","mongoDB","Mongoose"],
-        links:["https://github.com/AariF-ShazZ/autoMobile" , "https://auto-mobile.vercel.app/"]
+        links:["https://github.com/AariF-ShazZ/shoesCompleteProject" , "https://auto-mobile.vercel.app/"]
 
     },
     {
