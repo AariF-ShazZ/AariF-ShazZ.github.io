@@ -1,20 +1,25 @@
-import { Box, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 
 export default function HeroSection() {
   const pdfPath = process.env.PUBLIC_URL + 'Aarif-Khan-Resume.pdf';
+  const openDriveLink = (driveLink) => {
+    window.open(driveLink, '_blank');
+  };
   return (
     <section id="heroSection" className="hero--section">
       <div className="hero--section--content--box">
         <Box className="hero--section--content" textAlign={"left"}>
-          <Text className="section--title" ml={["-20%", "-20%", "-20%", "0%", "0%"]}>Hey, I'm Aarif</Text>
-          <h1 className="hero--section--title">
+          <Text className="section--title" fontSize={["25px","25px","35px","35px"]} ml={["-10%", "-18%", "-18%", "0%"]} mb={["-10%", "-10px", "-10px", "-10px"]}>Hey, I'm Aarif</Text>
+          <Heading  textAlign={"left"} fontSize={["35px","40px","55px","60px"]} className="hero--section--title">
             <span className="hero--section-title--color">Full Stack</span>{" "}
             <br />
             Developer
-          </h1>
+          </Heading>
         </Box>
         <Box mt={"15%"}>
-          <a style={{ textDecoration: "none" }} target="#" href="https://drive.google.com/file/d/19T2RfJ0SRDWPDT3sHdZsl0D9vq0zHnF9/view?usp=sharing">
+          <a style={{ textDecoration: "none" }} onClick={() => {
+                      openDriveLink('https://drive.google.com/file/d/19T2RfJ0SRDWPDT3sHdZsl0D9vq0zHnF9/view?usp=sharing');
+          }} target="#" href={pdfPath} download='Aarif-Khan-Resume.pdf'>
             <button className="btn btn-primary">Resume</button>
           </a>
         </Box>

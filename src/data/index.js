@@ -1,6 +1,7 @@
 import todoList from  "../Image/todoList.png"
 import Licious from  "../Image/Licious.png"
 import shoesHub from  "../Image/shoesHub.png"
+import Youtube from  "../Image/Youtube.png"
 export const skills = [    
   {
       icon:"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain.svg",
@@ -90,19 +91,19 @@ export const projects = [
     },
     {
         id:1,
-        img:"https://reactjsexample.com/content/images/2022/07/Code-2022-26-40-14.jpg",
-        title:"BeautyBebo",
-        description:"Beauty Bebo products do not transform your face and body. Rather, they bring out the beautiful skin that you already have. Our main goal is to bring out the best you possible. You will always find our beauty products online, so you don't necessarily have to worry about our stores.",
+        img:Youtube,
+        title:"YouTube",
+        description:"This is a video streaming and an immersive interface that mirrors the YouTube experience",
         tech:["HTML" , "CSS" ,"JS"],
-        links:["https://github.com/AariF-ShazZ/BeautyBebo-clone-project" , "https://delightful-duckanoo-17fff8.netlify.app/"]
+        links:["https://github.com/AariF-ShazZ/YouTubeClone" , "https://delightful-duckanoo-17fff8.netlify.app/"]
     },
     {
         id:2,
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwhSfHjTBT_l1oNCbSgbFwQYT4OiZQ1lkvjg&usqp=CAU",
-        title:"BigBasket",
-        description:"The best online grocery store in India. bigbasket is an online supermarket for all your daily needs.",
-        tech:["React","Redux","Node","Express","MongoDB","Mongoose","CSS","Chakra UI"],
-        links:["https://github.com/AariF-ShazZ/BigBasket-7758" , "https://wondermart-xi.vercel.app/"]
+        img:"https://reactjsexample.com/content/images/2022/07/Code-2022-26-40-14.jpg",
+        title:"BeautyBebo",
+        description:"Beauty Bebo products do not transform your face and body. Rather, they bring out the beautiful skin that you already have. Our main goal is to bring out the best you possible. You will always find our beauty products online, so you don't necessarily have to worry about our stores.",
+        tech:["HTML","CSS","JavaScript"],
+        links:["https://github.com/AariF-ShazZ/BeautyBebo-clone-project" , "https://delightful-duckanoo-17fff8.netlify.app/"]
     },
     {
         id:3,

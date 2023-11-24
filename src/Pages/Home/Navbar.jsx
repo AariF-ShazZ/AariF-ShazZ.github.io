@@ -32,6 +32,10 @@ function Navbar() {
     }
   }, []);
   const pdfPath = process.env.PUBLIC_URL + 'Aarif-Khan-Resume.pdf';
+  const openDriveLink = (driveLink) => {
+    window.open(driveLink, '_blank');
+  };
+  
   return (
     <nav className={`navbar ${navActive ? "active" : ""}`}>
       <div>
@@ -139,8 +143,10 @@ function Navbar() {
       <a
         onClick={() => {
           closeMenu()
+          openDriveLink('https://drive.google.com/file/d/19T2RfJ0SRDWPDT3sHdZsl0D9vq0zHnF9/view?usp=sharing');
         }}
         href={pdfPath}
+        target="#" 
         download="Aarif-Khan-Resume.pdf"
         spy={true}
         smooth={true}
@@ -148,7 +154,7 @@ function Navbar() {
         duration={500}
         className="btn btn-outline-primary"
       >
-        Download
+        Resume
       </a>
     </nav>
   );
