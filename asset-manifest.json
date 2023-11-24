@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.1279bf3c.css",
-    "main.js": "/static/js/main.ca6efc85.js",
+    "main.js": "/static/js/main.0d9c506d.js",
     "static/media/shoesHub.png": "/static/media/shoesHub.2b722727afb23511e730.png",
     "static/media/Licious.png": "/static/media/Licious.f9d1a36856e8ece6dd61.png",
     "static/media/Youtube.png": "/static/media/Youtube.878f129ef6f9e0aefda9.png",
     "static/media/todoList.png": "/static/media/todoList.70ec7aec8bf8165da537.png",
     "index.html": "/index.html",
     "main.1279bf3c.css.map": "/static/css/main.1279bf3c.css.map",
-    "main.ca6efc85.js.map": "/static/js/main.ca6efc85.js.map"
+    "main.0d9c506d.js.map": "/static/js/main.0d9c506d.js.map"
   },
   "entrypoints": [
     "static/css/main.1279bf3c.css",
-    "static/js/main.ca6efc85.js"
+    "static/js/main.0d9c506d.js"
   ]
 }
