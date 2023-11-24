@@ -1275,9 +1275,11 @@ input[type="checkbox"] {
     padding: 133.3px 85.3px 50px 85.3px ;
   }
 }
+
 .linkedin{
   color:#ff0000;
 }
+
 .linkedin:hover{
   color: #0a66c2;
   font-size: 40px;
