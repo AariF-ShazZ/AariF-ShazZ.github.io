@@ -5,6 +5,7 @@ export default function HeroSection() {
   const openDriveLink = (driveLink) => {
     window.open(driveLink, '_blank');
   };
+    
   return (
     <section id="heroSection" className="hero--section">
       <div className="hero--section--content--box">

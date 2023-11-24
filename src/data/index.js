@@ -95,7 +95,7 @@ export const projects = [
         title:"YouTube",
         description:"This is a video streaming and an immersive interface that mirrors the YouTube experience",
         tech:["HTML" , "CSS" ,"JS"],
-        links:["https://github.com/AariF-ShazZ/YouTubeClone" , "https://delightful-duckanoo-17fff8.netlify.app/"]
+        links:["https://github.com/AariF-ShazZ/YouTubeClone" ,"https://curious-seahorse-e6e7d1.netlify.app/"]
     },
     {
         id:2,
