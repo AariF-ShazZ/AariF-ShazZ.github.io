@@ -1,61 +1,93 @@
-import { Box, Button, Flex, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  Tag,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 
 const Card = ({ title, description, tech, links, img }) => {
   return (
-    <Box w={["350px", "350px", "350px", "400px", "400px"]} my={["5%"]} rounded={10} bg={"#ffffff"} h="550px" p="10px 15px 50px 15px" boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"}>
-      <Stack>
-        <Image rounded={10} h="220px" w="100%" src={img} />
-        <Box color="black" textAlign="center">
-          <Heading>{title}</Heading>
-        </Box>
-        <Text color="#282938">{description}</Text>
-        <Text >
-          <span  style={{color:"#ff0000",fontWeight:"bold"}}>Tech Stack:{" "}</span>
-          <Text color="black" as="span">
-            {tech.join(" ,")}
-          </Text>
+    <Box
+      bg="white"
+      rounded="2xl"
+      overflow="hidden"
+      boxShadow="0 10px 30px rgba(0,0,0,0.08)"
+      transition="all 0.35s ease"
+      _hover={{
+        transform: "translateY(-8px)",
+        boxShadow: "0 18px 45px rgba(0,0,0,0.15)",
+      }}
+    >
+      {/* Image */}
+      <Box overflow="hidden">
+        <Image
+          src={img}
+          alt={title}
+          h="220px"
+          w="100%"
+          objectFit="cover"
+          transition="transform 0.5s ease"
+          _groupHover={{ transform: "scale(1.05)" }}
+        />
+      </Box>
+
+      {/* Content */}
+      <Stack p={6} spacing={4}>
+        <Heading fontSize="xl" fontWeight="600">
+          {title}
+        </Heading>
+
+        <Text fontSize="sm" color="gray.600" noOfLines={3}>
+          {description}
         </Text>
-        <HStack spacing={50} my={"3%"}>
-          <Flex alignItems={"center"} justifyContent={"space-between"} w={"100%"}>
-            <p className="text-sm portfolio--link">
-              <a href={links[0]}>View In Github</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 20 19"
-                fill="none"
+
+        {/* Tech stack */}
+        <Wrap>
+          {tech.map((item, index) => (
+            <WrapItem key={index}>
+              <Tag
+                size="sm"
+                variant="subtle"
+                colorScheme="green"
+                borderRadius="full"
               >
-                <path
-                  d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                  stroke="currentColor"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </p>
-            <p className="text-sm portfolio--link">
-              <a href={links[1]}>View In Live</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 20 19"
-                fill="none"
-              >
-                <path
-                  d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                  stroke="currentColor"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </p>
-          </Flex>
-        </HStack>
+                {item}
+              </Tag>
+            </WrapItem>
+          ))}
+        </Wrap>
+
+        {/* Buttons */}
+        <Flex gap={4} pt={3}>
+          <Button
+            as="a"
+            href={links[0]}
+            target="_blank"
+            variant="outline"
+            colorScheme="gray"
+            size="sm"
+            w="full"
+          >
+            GitHub
+          </Button>
+
+          <Button
+            as="a"
+            href={links[1]}
+            target="_blank"
+            colorScheme="green"
+            size="sm"
+            w="full"
+          >
+            Live Demo
+          </Button>
+        </Flex>
       </Stack>
     </Box>
   );
