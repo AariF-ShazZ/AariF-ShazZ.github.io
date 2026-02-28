@@ -1,99 +1,94 @@
-import { VStack, Text, Heading, Flex, Box, Image } from "@chakra-ui/react";
+import { VStack, Text, Heading, Box, Flex, Image } from "@chakra-ui/react";
 
 export default function AboutMe() {
   return (
-    <section className="about--section dark-section" id="AboutMe">
+    <section className="about--section" id="AboutMe">
       <Flex
-        maxW="1300px"
+        direction={{ base: "column", lg: "row" }}
+        gap={{ base: 12, lg: 20 }}
+        align="center"
+        maxW="1200px"
         mx="auto"
         px={{ base: 5, md: 8 }}
-        py={{ base: 20, md: 28 }}
-        direction={{ base: "column", lg: "row" }}
-        align="center"
-        gap={{ base: 12, lg: 20 }}
       >
         {/* Image */}
         <Box
           flex="1"
-          display="flex"
-          justifyContent="center"
-          position="relative"
+          borderRadius="2xl"
+          overflow="hidden"
+          boxShadow="0 25px 60px rgba(0,0,0,0.6)"
         >
-          <Box
-            position="absolute"
-            inset="-20px"
-            bg="linear-gradient(135deg,#ff0055,#ff7a18)"
-            filter="blur(100px)"
-            opacity={0.25}
-            borderRadius="full"
-          />
           <Image
             src="./img/userAbout.jpg"
-            alt="About Aarif Khan"
-            rounded="2xl"
-            zIndex={1}
-            w={{ base: "260px", md: "340px", lg: "380px" }}
+            alt="About Aarif"
+            w="100%"
+            h="100%"
             objectFit="cover"
           />
         </Box>
 
         {/* Content */}
-        <Box flex="1.3">
+        <VStack flex="1.2" align="flex-start" spacing={6}>
           <Heading
-            fontSize={{ base: "32px", md: "42px", lg: "50px" }}
-            fontWeight="900"
-            mb={6}
-            color="white"
+             fontSize={{ base: "34px", md: "44px", lg: "56px" }}
+          fontWeight="900"
+          bgGradient="linear(to-r, #ff0055, #ff7a18)"
+          bgClip="text"
+            letterSpacing="0.5px"
+            position="relative"
+            // _after={{
+            //   content: '""',
+            //   position: "absolute",
+            //   left: 0,
+            //   bottom: "-14px",
+            //   width: "90px",
+            //   height: "5px",
+            //   borderRadius: "full",
+            //   bg: "linear-gradient(135deg,#ff0055,#ff7a18)",
+            // }}
           >
-            About <span className="gradient-text">Me</span>
+            About Me
           </Heading>
 
           <VStack
-            alignItems="flex-start"
-            spacing={5}
-            color="gray.400"
-            fontSize={{ base: "15px", md: "16px", lg: "18px" }}
-            lineHeight="1.9"
+            align="flex-start"
+            spacing={4}
+            fontSize={{ base: "15px", md: "17px", lg: "18px" }}
+            color="gray.500"
+            lineHeight="1.8"
           >
             <Text>
-              Hi, I’m <strong style={{ color: "#fff" }}>Aarif Khan</strong>, a
-              Full Stack Developer with{" "}
-              <strong style={{ color: "#ff7a18" }}>
-                2.5+ years of hands-on experience
-              </strong>{" "}
-              building scalable, high-performance web applications using MERN &
-              Next.js.
+              Hi, I’m{" "}
+              <strong style={{ color: "#ff7a18" }}>Aarif</strong>, a Full Stack
+              Developer with{" "}
+              <strong style={{ color: "#ff7a18" }}>2.5+ years</strong> of
+              experience building scalable, high-performance web applications.
             </Text>
 
             <Text>
-              I specialize in crafting clean, maintainable, and user-centric
-              solutions with a strong focus on performance, responsiveness, and
-              scalable architecture. I enjoy converting complex business
-              workflows into simple and intuitive digital products.
+              I specialize in building modern frontend architectures and robust
+              backend systems using MERN & Next.js with a strong focus on
+              performance, maintainability, and scalability.
             </Text>
 
             <Text>
-              Currently, I’m working as a Full Stack Developer at{" "}
-              <strong style={{ color: "#fff" }}>NationFirstChoice</strong>, where
-              I build production-grade systems including a real-time CRM for car
-              rental reservations, handling frontend engineering, backend APIs,
-              authentication, and database design.
+              Currently at{" "}
+              <strong style={{ color: "#ff7a18" }}>NationFirstChoice</strong>,
+              working on production-grade CRM platforms, authentication systems,
+              real-time dashboards, and secure backend APIs.
             </Text>
 
             <Text>
-              My technical skill set includes React, Next.js, Node.js, Express,
-              MongoDB, Redux, TypeScript, Material UI, Chakra UI, and Tailwind
-              CSS. I constantly upgrade my skill set to stay ahead in modern web
-              development.
+              Tech stack: React, Next.js, TypeScript, Node.js, Express, MongoDB,
+              Redux, Chakra UI, Material UI, Tailwind CSS.
             </Text>
 
             <Text>
-              Outside coding, I enjoy traveling, exploring cultures, and gaining
-              fresh perspectives that influence both personal growth and product
-              thinking.
+              Outside of work, I enjoy traveling, learning new technologies, and
+              solving real-world problems through software.
             </Text>
           </VStack>
-        </Box>
+        </VStack>
       </Flex>
     </section>
   );

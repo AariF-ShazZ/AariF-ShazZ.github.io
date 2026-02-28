@@ -1,4 +1,12 @@
-import { Box, Flex, Heading, Image, Text, Stack, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  Text,
+  Stack,
+  Button,
+} from "@chakra-ui/react";
 
 export default function HeroSection() {
   const openDriveLink = (driveLink) => {
@@ -76,7 +84,7 @@ export default function HeroSection() {
               transition="all 0.3s ease"
               onClick={() =>
                 openDriveLink(
-                  "https://drive.google.com/file/d/1hO4XMMxV2ygppxbAizenVU57XgrU7xNu/view?usp=sharing"
+                  "https://drive.google.com/file/d/1hO4XMMxV2ygppxbAizenVU57XgrU7xNu/view?usp=sharing",
                 )
               }
             >
@@ -125,13 +133,48 @@ export default function HeroSection() {
             borderRadius="full"
             zIndex={0}
           />
+          <Box
+            position="relative"
+            w={{ base: "220px", sm: "260px", md: "300px", lg: "340px" }}
+            h={{ base: "220px", sm: "260px", md: "300px", lg: "340px" }}
+            borderRadius="50%"
+            bgGradient="linear(135deg, #ff0055, #ff7a18)"
+            p="4px"
+            boxShadow="0 0 60px rgba(255,0,85,0.45)"
+            animation="float 6s ease-in-out infinite"
+          >
+            {/* Glow ring */}
+            <Box
+              position="absolute"
+              inset="-12px"
+              borderRadius="50%"
+              bgGradient="linear(135deg, #ff0055, #ff7a18)"
+              opacity="0.25"
+              filter="blur(25px)"
+              zIndex={0}
+            />
 
-          <Image
-            src="./img/Aarif.png"
-            alt="Aarif Khan"
-            w="100%"
-            zIndex={1}
-          />
+            {/* Image wrapper */}
+            <Box
+              position="relative"
+              w="100%"
+              h="100%"
+              borderRadius="50%"
+              overflow="hidden"
+              bg="black"
+              zIndex={1}
+            >
+              <Image
+                src="./img/Aarif.png"
+                alt="Aarif Khan"
+                w="100%"
+                h="100%"
+                objectFit="cover"
+                transition="transform 0.5s ease"
+                _hover={{ transform: "scale(1.05)" }}
+              />
+            </Box>
+          </Box>{" "}
         </Flex>
       </Flex>
     </section>

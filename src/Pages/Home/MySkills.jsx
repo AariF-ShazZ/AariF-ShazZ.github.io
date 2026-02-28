@@ -4,29 +4,33 @@ import { skills } from "../../data";
 
 export default function MySkills() {
   return (
-    <section className="skills--section dark-section" id="mySkills">
-      <Box maxW="1300px" mx="auto" px={{ base: 5, md: 8 }} py={{ base: 20, md: 28 }}>
-        <VStack spacing={3} textAlign="center" mb={14}>
-          <Heading
-            fontSize={{ base: "30px", md: "40px", lg: "48px" }}
-            fontWeight="900"
-            color="white"
-          >
-            My <span className="gradient-text">Tech Stack</span>
-          </Heading>
+    <section className="skills--section" id="mySkills">
+      <VStack spacing={4} textAlign="center" mb={14} border={"solid 2px blue"}>
+        <Heading
+         fontSize={{ base: "34px", md: "44px", lg: "56px" }}
+          fontWeight="900"
+          bgGradient="linear(to-r, #ff0055, #ff7a18)"
+          bgClip="text"
+        >
+          Tech Stack & Tools
+        </Heading> 
 
-          <Text
-            maxW="760px"
-            fontSize={{ base: "14px", md: "16px", lg: "18px" }}
-            color="gray.400"
-          >
-            A modern, scalable, and production-ready technology stack that I use
-            to design, develop, and deploy high-performance full-stack web
-            applications.
-          </Text>
-        </VStack>
+        <Text
+          maxW="720px"
+          fontSize={{ base: "14px", md: "16px", lg: "18px" }}
+          color="gray.500"
+          lineHeight="1.7"
+        >
+          A production-ready, modern technology stack used to build scalable and
+          high-performance applications.
+        </Text>
+      </VStack>
 
+      <Box>
         <Grid
+          maxW="1200px"
+          mx="auto"
+          px={{ base: 4, md: 6 }}
           templateColumns={[
             "repeat(2, 1fr)",
             "repeat(3, 1fr)",
@@ -35,8 +39,8 @@ export default function MySkills() {
           ]}
           gap={{ base: 6, md: 10 }}
         >
-          {skills.map((item, index) => (
-            <SkillsCard key={index} {...item} />
+          {skills?.map((item, index) => (
+            <SkillsCard key={index} icon={item.icon} text={item.text} />
           ))}
         </Grid>
       </Box>

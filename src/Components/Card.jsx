@@ -14,16 +14,33 @@ import {
 const Card = ({ title, description, tech, links, img }) => {
   return (
     <Box
-      bg="white"
+      role="group"
+      bg="rgba(15,15,20,0.85)"
+      backdropFilter="blur(14px)"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
       rounded="2xl"
       overflow="hidden"
-      boxShadow="0 10px 30px rgba(0,0,0,0.08)"
-      transition="all 0.35s ease"
+      transition="all 0.4s ease"
+      position="relative"
       _hover={{
-        transform: "translateY(-8px)",
-        boxShadow: "0 18px 45px rgba(0,0,0,0.15)",
+        transform: "translateY(-10px) scale(1.01)",
+        boxShadow: "0 30px 80px rgba(255, 0, 85, 0.25)",
+        borderColor: "#ff0055",
       }}
     >
+      {/* Glow Border Effect */}
+      <Box
+        position="absolute"
+        inset="0"
+        rounded="2xl"
+        bgGradient="linear(135deg, transparent, rgba(255,0,85,0.15), transparent)"
+        opacity="0"
+        transition="opacity 0.4s ease"
+        _groupHover={{ opacity: 1 }}
+        pointerEvents="none"
+      />
+
       {/* Image */}
       <Box overflow="hidden">
         <Image
@@ -32,18 +49,28 @@ const Card = ({ title, description, tech, links, img }) => {
           h="220px"
           w="100%"
           objectFit="cover"
-          transition="transform 0.5s ease"
-          _groupHover={{ transform: "scale(1.05)" }}
+          transition="transform 0.6s ease"
+          _groupHover={{ transform: "scale(1.08)" }}
         />
       </Box>
 
       {/* Content */}
-      <Stack p={6} spacing={4}>
-        <Heading fontSize="xl" fontWeight="600">
+      <Stack p={6} spacing={4} position="relative" zIndex={1}>
+        <Heading
+          fontSize="xl"
+          fontWeight="800"
+          letterSpacing="-0.02em"
+          color="white"
+        >
           {title}
         </Heading>
 
-        <Text fontSize="sm" color="gray.600" noOfLines={3}>
+        <Text
+          fontSize="sm"
+          color="gray.300"
+          lineHeight="1.75"
+          noOfLines={3}
+        >
           {description}
         </Text>
 
@@ -53,9 +80,19 @@ const Card = ({ title, description, tech, links, img }) => {
             <WrapItem key={index}>
               <Tag
                 size="sm"
-                variant="subtle"
-                colorScheme="green"
+                px={3}
+                py={1.5}
+                bg="whiteAlpha.100"
+                border="1px solid"
+                borderColor="whiteAlpha.200"
+                color="white"
+                fontWeight="600"
                 borderRadius="full"
+                letterSpacing="0.3px"
+                _hover={{
+                  bg: "linear-gradient(135deg, #ff0055, #ff7a18)",
+                  borderColor: "transparent",
+                }}
               >
                 {item}
               </Tag>
@@ -64,15 +101,22 @@ const Card = ({ title, description, tech, links, img }) => {
         </Wrap>
 
         {/* Buttons */}
-        <Flex gap={4} pt={3}>
+        <Flex gap={4} pt={4}>
           <Button
             as="a"
             href={links[0]}
             target="_blank"
-            variant="outline"
-            colorScheme="gray"
             size="sm"
             w="full"
+            bg="whiteAlpha.100"
+            color="white"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            _hover={{
+              bg: "whiteAlpha.200",
+              borderColor: "#ff0055",
+              transform: "translateY(-2px)",
+            }}
           >
             GitHub
           </Button>
@@ -81,9 +125,16 @@ const Card = ({ title, description, tech, links, img }) => {
             as="a"
             href={links[1]}
             target="_blank"
-            colorScheme="green"
             size="sm"
             w="full"
+            bgGradient="linear(to-r, #ff0055, #ff7a18)"
+            color="white"
+            fontWeight="700"
+            _hover={{
+              opacity: 0.95,
+              transform: "translateY(-2px)",
+              boxShadow: "0 12px 30px rgba(255,0,85,0.45)",
+            }}
           >
             Live Demo
           </Button>
