@@ -1,61 +1,144 @@
-import { Box, Button, Flex, Heading, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Stack,
+  Text,
+  Tag,
+  Wrap,
+  WrapItem,
+} from "@chakra-ui/react";
 
 const Card = ({ title, description, tech, links, img }) => {
   return (
-    <Box w={["350px", "350px", "350px", "400px", "400px"]} my={["5%"]} rounded={10} bg={"#ffffff"} h="550px" p="10px 15px 50px 15px" boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"}>
-      <Stack>
-        <Image rounded={10} h="220px" w="100%" src={img} />
-        <Box color="black" textAlign="center">
-          <Heading>{title}</Heading>
-        </Box>
-        <Text color="#282938">{description}</Text>
-        <Text >
-          <span  style={{color:"#ff0000",fontWeight:"bold"}}>Tech Stack:{" "}</span>
-          <Text color="black" as="span">
-            {tech.join(" ,")}
-          </Text>
+    <Box
+      role="group"
+      bg="rgba(15,15,20,0.85)"
+      backdropFilter="blur(14px)"
+      border="1px solid"
+      borderColor="whiteAlpha.200"
+      rounded="2xl"
+      overflow="hidden"
+      transition="all 0.4s ease"
+      position="relative"
+      _hover={{
+        transform: "translateY(-10px) scale(1.01)",
+        boxShadow: "0 30px 80px rgba(255, 0, 85, 0.25)",
+        borderColor: "#ff0055",
+      }}
+    >
+      {/* Glow Border Effect */}
+      <Box
+        position="absolute"
+        inset="0"
+        rounded="2xl"
+        bgGradient="linear(135deg, transparent, rgba(255,0,85,0.15), transparent)"
+        opacity="0"
+        transition="opacity 0.4s ease"
+        _groupHover={{ opacity: 1 }}
+        pointerEvents="none"
+      />
+
+      {/* Image */}
+      <Box overflow="hidden">
+        <Image
+          src={img}
+          alt={title}
+          h="220px"
+          w="100%"
+          objectFit="cover"
+          transition="transform 0.6s ease"
+          _groupHover={{ transform: "scale(1.08)" }}
+        />
+      </Box>
+
+      {/* Content */}
+      <Stack p={6} spacing={4} position="relative" zIndex={1}>
+        <Heading
+          fontSize="xl"
+          fontWeight="800"
+          letterSpacing="-0.02em"
+          color="white"
+        >
+          {title}
+        </Heading>
+
+        <Text
+          fontSize="sm"
+          color="gray.300"
+          lineHeight="1.75"
+          noOfLines={3}
+        >
+          {description}
         </Text>
-        <HStack spacing={50} my={"3%"}>
-          <Flex alignItems={"center"} justifyContent={"space-between"} w={"100%"}>
-            <p className="text-sm portfolio--link">
-              <a href={links[0]}>View In Github</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 20 19"
-                fill="none"
+
+        {/* Tech stack */}
+        <Wrap>
+          {tech.map((item, index) => (
+            <WrapItem key={index}>
+              <Tag
+                size="sm"
+                px={3}
+                py={1.5}
+                bg="whiteAlpha.100"
+                border="1px solid"
+                borderColor="whiteAlpha.200"
+                color="white"
+                fontWeight="600"
+                borderRadius="full"
+                letterSpacing="0.3px"
+                _hover={{
+                  bg: "linear-gradient(135deg, #ff0055, #ff7a18)",
+                  borderColor: "transparent",
+                }}
               >
-                <path
-                  d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                  stroke="currentColor"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </p>
-            <p className="text-sm portfolio--link">
-              <a href={links[1]}>View In Live</a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="12"
-                height="12"
-                viewBox="0 0 20 19"
-                fill="none"
-              >
-                <path
-                  d="M4.66667 1.66675H18V15.0001M18 1.66675L2 17.6667L18 1.66675Z"
-                  stroke="currentColor"
-                  stroke-width="2.66667"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </p>
-          </Flex>
-        </HStack>
+                {item}
+              </Tag>
+            </WrapItem>
+          ))}
+        </Wrap>
+
+        {/* Buttons */}
+        <Flex gap={4} pt={4}>
+          <Button
+            as="a"
+            href={links[0]}
+            target="_blank"
+            size="sm"
+            w="full"
+            bg="whiteAlpha.100"
+            color="white"
+            border="1px solid"
+            borderColor="whiteAlpha.300"
+            _hover={{
+              bg: "whiteAlpha.200",
+              borderColor: "#ff0055",
+              transform: "translateY(-2px)",
+            }}
+          >
+            GitHub
+          </Button>
+
+          <Button
+            as="a"
+            href={links[1]}
+            target="_blank"
+            size="sm"
+            w="full"
+            bgGradient="linear(to-r, #ff0055, #ff7a18)"
+            color="white"
+            fontWeight="700"
+            _hover={{
+              opacity: 0.95,
+              transform: "translateY(-2px)",
+              boxShadow: "0 12px 30px rgba(255,0,85,0.45)",
+            }}
+          >
+            Live Demo
+          </Button>
+        </Flex>
       </Stack>
     </Box>
   );

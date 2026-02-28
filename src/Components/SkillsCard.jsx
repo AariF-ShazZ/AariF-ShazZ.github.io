@@ -1,18 +1,45 @@
-import React from 'react'
-import { Flex, Image, Text } from '@chakra-ui/react'
-const SkillsCard = ({id,icon,text}) => {
-    return (
-        <div>
-            <div className="card">
-                <div className="bg">
-                <Image src={icon} w={"70%"} mt={"5%"} mr={"5%"} ml={"15%"} mb={"18%"} boxShadow={"rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"} _hover={{boxShadow:"rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;"}} borderRadius={"10%"}/>
-                <Flex px={"2%"} alignItems={"center"} justifyContent={"center"} fontSize={"20px"} fontWeight={800} color={"red"}>{text}</Flex>
-                </div>
-                <div className="blob"></div>
-            </div>
+import { Flex, Image, Text, Box } from "@chakra-ui/react";
 
-        </div>
-    )
-}
+const SkillsCard = ({ icon, text }) => {
+  return (
+    <Flex
+      direction="column"
+      align="center"
+      justify="center"
+      p={6}
+      rounded="2xl"
+      bg="#0f0f16"
+      border="1px solid rgba(255,255,255,0.08)"
+      transition="all 0.3s ease"
+      _hover={{
+        transform: "translateY(-6px) scale(1.02)",
+        borderColor: "#ff0055",
+        boxShadow: "0 15px 40px rgba(255,0,85,0.35)",
+      }}
+    >
+      <Box
+        p={4}
+        mb={4}
+        rounded="xl"
+        bg="rgba(255,255,255,0.08)"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <Image src={icon} alt={text} w="44px" h="44px" />
+      </Box>
 
-export default SkillsCard
+      <Text
+        fontSize="15px"
+        fontWeight="600"
+        color="white"
+        textAlign="center"
+        letterSpacing="0.5px"
+      >
+        {text}
+      </Text>
+    </Flex>
+  );
+};
+
+export default SkillsCard;
